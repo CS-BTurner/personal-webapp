@@ -1,0 +1,9 @@
+{
+  "extends": "../tsconfig.base.json",
+  "compilerOptions": {
+    "tsBuildInfoFile": "./.cache/build-info" /* Specify file to store incremental compilation information */,
+    "composite": true
+  },
+
+  "include": ["**/*.tsx"]
+}
