@@ -1,6 +1,41 @@
 .main-layout {
+  position: relative;
   display: grid;
   height: inherit;
-  grid-template-rows: 4rem auto;
-  background-color: #f3f3f3;
+  grid-template-rows: 6rem auto;
+  z-index: 1;
+
+  .articles-wrapper {
+    margin: 0.5rem 0;
+    display: grid;
+    row-gap: 0.5rem;
+  }
+
+  .app-header {
+    background: darkcyan;
+  }
+}
+
+.underlay {
+  height: inherit;
+  position: fixed;
+
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+
+  z-index: 0;
+
+  &.green-underlay {
+    opacity: 0.5;
+    clip-path: polygon(0 75%, 100% 20%, 100% 100%, 40% 100%);
+    background: darkgreen;
+  }
+
+  &.pink-underlay {
+    opacity: 0.8;
+    clip-path: polygon(0 75%, 100% 37%, 100% 100%, 0 100%);
+    background: pink;
+  }
 }
